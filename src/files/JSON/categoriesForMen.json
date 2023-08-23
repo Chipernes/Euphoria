@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Shirts",
+    "sub-title": "Explore Now!",
+    "imageSrc": "01.png"
+  },
+
+  {
+    "title": "Printed T-Shirts",
+    "subTitle": "Explore Now!",
+    "imageSrc": "02.png"
+  },
+
+  {
+    "title": "Plain T-Shirt",
+    "subTitle": "Explore Now!",
+    "imageSrc": "03.png"
+  },
+
+  {
+    "title": "Polo T-Shirt",
+    "subTitle": "Explore Now!",
+    "imageSrc": "04.png"
+  },
+
+  {
+    "title": "Hoodies & Sweetshirt",
+    "subTitle": "Explore Now!",
+    "imageSrc": "05.png"
+  },
+
+  {
+    "title": "Jeans",
+    "subTitle": "Explore Now!",
+    "imageSrc": "06.png"
+  },
+
+  {
+    "title": "Activewear",
+    "subTitle": "Explore Now!",
+    "imageSrc": "07.png"
+  },
+
+  {
+    "title": "Boxers",
+    "subTitle": "Explore Now!",
+    "imageSrc": "08.png"
+  }
+]

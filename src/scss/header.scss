@@ -1,0 +1,236 @@
+//====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  background-color: var(--white-color);
+  box-shadow: 0 0 10px var(--subtext-color);
+
+  &__container {
+  }
+
+  &__menu {
+  }
+}
+
+.menu {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: rem(30) 0;
+
+    @media (max-width: rem(935)) {
+      @include adaptiveValue("column-gap", 30, 12);
+      row-gap: rem(15);
+    }
+  }
+
+  &__logo {
+    & svg {
+      width: rem(90);
+      height: rem(45);
+    }
+
+    @media (max-width: rem(935)) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("gap", 40, 15);
+
+    @media (max-width: rem(935)) {
+      position: absolute;
+      top: -100vh;
+      left: 0;
+      z-index: 5;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: rem(30);
+      width: 100%;
+      height: 100vh;
+      padding: rem(50) 0;
+
+      background-color: var(--subtext-color);
+
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+
+      &.active {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-size: rem(22);
+    font-weight: 500;
+    color: var(--subtext-color);
+
+    transition: all 0.3s ease 0s;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--black-color);
+      }
+    }
+
+    @media (max-width: rem(935)) {
+      font-size: var(--h3-font-size);
+      color: var(--white-color);
+    }
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: var(--h6-font-size);
+
+    background-color: #F6F6F6;
+    border-radius: 8px;
+
+    @media (max-width: rem(640)) {
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  &__searcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: rem(12) rem(6) rem(12) rem(20);
+
+    & svg {
+      width: rem(20);
+      height: rem(20);
+
+      fill: #807D7E;
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (hover: hover) {
+      &:hover svg {
+        fill: var(--black-color);
+      }
+    }
+  }
+
+  &__input {
+    height: rem(44);
+    padding: 0 rem(20) 0 rem(6);
+
+    background-color: #F6F6F6;
+    border-radius: 8px;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::placeholder {
+      color: var(--subtext-color);
+
+      transition: all 0.3s ease 0s;
+    }
+
+    &:focus::placeholder {
+      transform: translateY(-50px);
+    }
+
+    @media (max-width: rem(640)) {
+      width: 100%;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("gap", 12, 5);
+
+    & svg {
+      width: rem(44);
+      height: rem(44);
+      fill: #F6F6F6;
+
+      transition: all 0.3s ease 0s;
+
+      @media (hover: hover) {
+        &:hover {
+          fill: var(--subtext-color);
+        }
+      }
+    }
+  }
+}
+
+//Burger
+.icon-menu {
+  display: none;
+  @media (max-width: rem(935)) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    &.menu-open {
+      span {
+        width: 0;
+      }
+
+      span,
+      &::before,
+      &::after {
+        background-color: var(--white-color);
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+//====================================================================================================
