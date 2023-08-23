@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Hoodies & Sweetshirt",
+    "sub-title": "Explore Now!",
+    "imageSrc": "01.png"
+  },
+
+  {
+    "title": "Coats & Parkas",
+    "subTitle": "Explore Now!",
+    "imageSrc": "02.png"
+  },
+
+  {
+    "title": "Tees & T-Shirt",
+    "subTitle": "Explore Now!",
+    "imageSrc": "03.png"
+  },
+
+  {
+    "title": "Boxers",
+    "subTitle": "Explore Now!",
+    "imageSrc": "04.png"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Black Sweatshirt with ....",
+    "sub-title": "Jhanvi’s  Brand",
+    "imageSrc": "01.png",
+    "price": "$123.00"
+  },
+
+  {
+    "title": "line Pattern Black H...",
+    "sub-title": "AS’s  Brand",
+    "imageSrc": "02.png",
+    "price": "$37.00"
+  },
+
+  {
+    "title": "Black Shorts",
+    "sub-title": "MM’s  Brand",
+    "imageSrc": "03.png",
+    "price": "$37.00"
+  },
+
+  {
+    "title": "Levender Hoodie with ....",
+    "sub-title": "Nike’s  Brand",
+    "imageSrc": "04.png",
+    "price": "$119.00"
+  }
+]
