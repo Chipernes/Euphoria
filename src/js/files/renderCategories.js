@@ -25,7 +25,7 @@ function renderCategories(categoriesArray, sex, imgSrc) {
                   <img class="categories-block__image" src="img/home/${imgSrc}/${element.imageSrc}" alt="Offer">
                   <div class="categories-block__info">
                     <div class="categories-block__block-heading block-heading">
-                      <h2 class="block-heading__title">${element.title}</h2>
+                      <h4 class="block-heading__title">${element.title}</h4>
                       <p class="block-heading__subtitle">${element.subTitle}</p>
                     </div>
                     <svg class="categories-block__arrow">

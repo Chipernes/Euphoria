@@ -8,8 +8,8 @@ async function getClothes(){
     renderCategories(clothesArray, clothesLimelights,);
 }
 
-function renderCategories(categoriesArray, block) {
-    categoriesArray.forEach((element) => {
+function renderCategories(clothesArray, block) {
+    clothesArray.forEach((element) => {
         const clothesBlockHTML =
             `              
               <div class="clothes-block">
@@ -20,7 +20,7 @@ function renderCategories(categoriesArray, block) {
                   <img class="clothes-block__image" src="img/home/limelights/${element.imageSrc}" alt="Offer">
                   <div class="clothes-block__info">
                     <div class="clothes-block__block-heading block-heading">
-                      <h2 class="block-heading__title">${element.title}</h2>
+                      <h4 class="block-heading__title">${element.title}</h4>
                       <p class="block-heading__subtitle">${element.subTitle}</p>
                     </div>
                     <div class="clothes-block__price">
