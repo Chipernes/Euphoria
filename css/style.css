@@ -569,6 +569,93 @@ For example header__container, main__container etc.
   color: var(--text-color);
 }
 
+.testimonial {
+  max-width: 25rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 2px solid var(--subtext-color);
+  border-radius: 10px;
+}
+
+.testimonial__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.testimonial__photo {
+  width: 3.625rem;
+  height: 3.625rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testimonial__stars {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  fill: var(--subtext-color);
+}
+
+.testimonial__stars[data-stars-counter="1"] svg:nth-child(-n+1) {
+  fill: var(--primary-2);
+}
+
+.testimonial__stars[data-stars-counter="2"] svg:nth-child(-n+2) {
+  fill: var(--primary-2);
+}
+
+.testimonial__stars[data-stars-counter="3"] svg:nth-child(-n+3) {
+  fill: var(--primary-2);
+}
+
+.testimonial__stars[data-stars-counter="4"] svg:nth-child(-n+4) {
+  fill: var(--primary-2);
+}
+
+.testimonial__stars[data-stars-counter="5"] svg:nth-child(-n+5) {
+  fill: var(--primary-2);
+}
+
+.testimonial__stars svg {
+  width: 1.4375rem;
+  height: 1.4375rem;
+}
+
+.testimonial__block-heading .block-heading__title {
+  margin: 1.25rem 0;
+  font-size: 1.375rem;
+  font-family: var(--title-font);
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  color: var(--text-color);
+}
+
+.testimonial__block-heading .block-heading__text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.0175rem;
+  color: var(--subtext-color);
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -855,14 +942,26 @@ For example header__container, main__container etc.
   }
 }
 
+@supports (margin-top: clamp(3.125rem, calc(2.0723684211rem + 5.2631578947vw), 6.25rem)) {
+  .page__feedback {
+    margin-top: clamp(3.125rem, calc(2.0723684211rem + 5.2631578947vw), 6.25rem);
+  }
+}
+
+@supports not (margin-top: clamp(3.125rem, calc(2.0723684211rem + 5.2631578947vw), 6.25rem)) {
+  .page__feedback {
+    margin-top: calc(3.125rem + 3.125 * (100vw - 20rem) / 59.375);
+  }
+}
+
 @supports (margin-bottom: clamp(3.125rem, calc(2.0723684211rem + 5.2631578947vw), 6.25rem)) {
-  .page__limelights {
+  .page__feedback {
     margin-bottom: clamp(3.125rem, calc(2.0723684211rem + 5.2631578947vw), 6.25rem);
   }
 }
 
 @supports not (margin-bottom: clamp(3.125rem, calc(2.0723684211rem + 5.2631578947vw), 6.25rem)) {
-  .page__limelights {
+  .page__feedback {
     margin-bottom: calc(3.125rem + 3.125 * (100vw - 20rem) / 59.375);
   }
 }
@@ -1051,6 +1150,7 @@ For example header__container, main__container etc.
 
 .news__photo img {
   width: 100%;
+  border-radius: 12px;
 }
 
 .arrival__swiper {
