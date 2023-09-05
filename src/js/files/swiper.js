@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
+        grabCursor: true,
 
         // If we need pagination
         pagination: {
@@ -62,6 +63,7 @@ window.addEventListener('load', () => {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
+        grabCursor: true,
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 20,

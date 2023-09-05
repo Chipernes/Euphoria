@@ -27,17 +27,17 @@ $mainColor: #3C4242; // Default font color
 @mixin h2-font-size {
   @include adaptiveValue("font-size", 34, 26); //34px
 }
-@mixin h3-font-siz {
+@mixin h3-font-size {
   @include adaptiveValue("font-size", 28, 20); //28px
 }
 @mixin h4-font-size {
-  @include adaptiveValue("font-size", 20, 14); //20px
+  @include adaptiveValue("font-size", 20, 16); //20px
 }
 @mixin h5-font-size {
-  @include adaptiveValue("font-size", 18, 12); //18px
+  @include adaptiveValue("font-size", 18, 14); //18px
 }
 @mixin h6-font-size {
-  @include adaptiveValue("font-size", 16, 10); //16px
+  @include adaptiveValue("font-size", 16, 12); //16px
 }
 
 :root {

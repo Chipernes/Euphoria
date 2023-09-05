@@ -550,6 +550,25 @@
   }
 
   &__content {
+    position: relative;
+  }
+
+  &__swiper-slide {
+    height: initial;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 2px !important;
+
+    background-color: var(--subtext-color);
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--text-color);
+  }
+
+  .feedback__swiper-pagination {
+    bottom: rem(-25);
   }
 }
 
