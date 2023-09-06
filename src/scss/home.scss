@@ -20,11 +20,11 @@
   }
 
   &__for-women {
-    @include adaptiveValue("margin-top", 100, 50);
+    @include adaptiveValue("margin-top", 85, 35);
   }
 
   &__brands {
-    @include adaptiveValue("margin-top", 100, 50);
+    @include adaptiveValue("margin-top", 85, 35);
   }
 
   &__limelights {
@@ -443,10 +443,10 @@
 
   &__categories {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    @include adaptiveValue("gap", 50, 20);
+    row-gap: rem(15);
   }
 }
 
@@ -461,10 +461,10 @@
 
   &__categories {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    @include adaptiveValue("gap", 50, 20);
+    row-gap: rem(15);
   }
 }
 

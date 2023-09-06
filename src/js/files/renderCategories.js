@@ -7,20 +7,20 @@ getCategoriesForMen();
 async function getCategoriesForMen(){
     const response = await fetch('./files/JSON/categoriesForMen.json');
     const categoriesArray = await response.json();
-    renderCategories(categoriesArray, categoriesForMen, 'for-men');
+    renderCategories(categoriesArray, categoriesForMen, 'for-men', 'for-men');
 }
 
 async function getCategoriesForWomen(){
     const response = await fetch('./files/JSON/categoriesForWomen.json');
     const categoriesArray = await response.json();
-    renderCategories(categoriesArray, categoriesForWomen, 'for-women');
+    renderCategories(categoriesArray, categoriesForWomen, 'for-women', 'for-women');
 }
 
-function renderCategories(categoriesArray, sex, imgSrc) {
+function renderCategories(categoriesArray, sex, imgSrc, categoriesSex) {
     categoriesArray.forEach((element) => {
        const categoriesBlockHTML =
            `
-               <div class="categories-block">
+               <div class="${categoriesSex}__categories-block categories-block">
                 <a class="categories-block__link" href="#">
                   <img class="categories-block__image" src="img/home/${imgSrc}/${element.imageSrc}" alt="Offer">
                   <div class="categories-block__info">
@@ -35,7 +35,6 @@ function renderCategories(categoriesArray, sex, imgSrc) {
                 </a>
               </div>
            `;
-
-        sex.insertAdjacentHTML('beforeend', categoriesBlockHTML);
+       sex.insertAdjacentHTML('beforeend', categoriesBlockHTML);
     });
 }

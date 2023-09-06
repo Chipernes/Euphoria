@@ -65,3 +65,18 @@ document.addEventListener('click', (event) => {
         targetClothesHeart.style.stroke = targetClothesHeart.style.stroke === 'var(--text-color)' ? 'var(--red-color)' : 'var(--text-color)';
     }
 });
+
+
+// Adding categories
+window.addEventListener('load', () => {
+    const forMenCategories = document.querySelectorAll('.for-men__categories-block');
+    const categoriesBlockEmptyHTML =
+        `
+                <div class="for-men__categories-block categories-block">
+                </div>
+            `;
+    for (let i = forMenCategories.length % 4; i < 4; i += 1) {
+        forMenCategories[0].closest('.for-men__categories').insertAdjacentHTML('beforeend', categoriesBlockEmptyHTML);
+    }
+});
+

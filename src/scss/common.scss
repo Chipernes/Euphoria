@@ -226,16 +226,22 @@
 
 // Categories block
 .categories-block {
-  flex: 1 1 auto;
-  @media (min-width: rem(620)) {
-    max-width: rem(400);
+  @media (min-width: rem(320)) {
+    width: 48%;
   }
 
-  @media (min-width: rem(1260)) {
-    max-width: rem(270);
+  @media (min-width: rem(600)) {
+    width: 32%;
+  }
+
+  @media (min-width: rem(950)) {
+    width: 22%;
   }
 
   &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
     @media (hover: hover) {
       &:hover .categories-block__arrow {
         transform: translateX(10px);
@@ -244,10 +250,8 @@
   }
 
   &__image {
-    width: 100%;/*
-    @media (min-width: rem(1260)) {
-      max-width: rem(270);
-    }*/
+    width: 100%;
+    height: 100%;
 
     border-radius: 10px;
     object-fit: cover;
@@ -266,7 +270,7 @@
     .block-heading__title {
       margin-bottom: rem(5);
 
-      font-size: var(--h5-font-size);
+      @include h5-font-size;
       font-weight: 700;
       line-height: 156%;
       color: var(--text-color);

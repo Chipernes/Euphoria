@@ -366,18 +366,25 @@ For example header__container, main__container etc.
   }
 }
 
-.categories-block {
-  flex: 1 1 auto;
-}
-@media (min-width: 38.75rem) {
+@media (min-width: 20rem) {
   .categories-block {
-    max-width: 25rem;
+    width: 48%;
   }
 }
-@media (min-width: 78.75rem) {
+@media (min-width: 37.5rem) {
   .categories-block {
-    max-width: 16.875rem;
+    width: 32%;
   }
+}
+@media (min-width: 59.375rem) {
+  .categories-block {
+    width: 22%;
+  }
+}
+.categories-block__link {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 @media (hover: hover) {
   .categories-block__link:hover .categories-block__arrow {
@@ -385,10 +392,8 @@ For example header__container, main__container etc.
   }
 }
 .categories-block__image {
-  width: 100%; /*
-@media (min-width: rem(1260)) {
-  max-width: rem(270);
-}*/
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -403,10 +408,19 @@ For example header__container, main__container etc.
 }
 .categories-block__block-heading .block-heading__title {
   margin-bottom: 0.3125rem;
-  font-size: var(--h5-font-size);
   font-weight: 700;
   line-height: 156%;
   color: var(--text-color);
+}
+@supports (font-size: clamp( 0.875rem , calc(0.7907894737rem + 0.4210526316vw) , 1.125rem )) {
+  .categories-block__block-heading .block-heading__title {
+    font-size: clamp( 0.875rem , calc(0.7907894737rem + 0.4210526316vw) , 1.125rem );
+  }
+}
+@supports not (font-size: clamp( 0.875rem , calc(0.7907894737rem + 0.4210526316vw) , 1.125rem )) {
+  .categories-block__block-heading .block-heading__title {
+    font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 59.375);
+  }
 }
 .categories-block__block-heading .block-heading__subtitle {
   font-size: 0.8125rem;
@@ -1056,24 +1070,24 @@ For example header__container, main__container etc.
     margin-top: calc(3.125rem + 3.125 * (100vw - 20rem) / 59.375);
   }
 }
-@supports (margin-top: clamp( 3.125rem , calc(2.0723684211rem + 5.2631578947vw) , 6.25rem )) {
+@supports (margin-top: clamp( 2.1875rem , calc(1.1348684211rem + 5.2631578947vw) , 5.3125rem )) {
   .page__for-women {
-    margin-top: clamp( 3.125rem , calc(2.0723684211rem + 5.2631578947vw) , 6.25rem );
+    margin-top: clamp( 2.1875rem , calc(1.1348684211rem + 5.2631578947vw) , 5.3125rem );
   }
 }
-@supports not (margin-top: clamp( 3.125rem , calc(2.0723684211rem + 5.2631578947vw) , 6.25rem )) {
+@supports not (margin-top: clamp( 2.1875rem , calc(1.1348684211rem + 5.2631578947vw) , 5.3125rem )) {
   .page__for-women {
-    margin-top: calc(3.125rem + 3.125 * (100vw - 20rem) / 59.375);
+    margin-top: calc(2.1875rem + 3.125 * (100vw - 20rem) / 59.375);
   }
 }
-@supports (margin-top: clamp( 3.125rem , calc(2.0723684211rem + 5.2631578947vw) , 6.25rem )) {
+@supports (margin-top: clamp( 2.1875rem , calc(1.1348684211rem + 5.2631578947vw) , 5.3125rem )) {
   .page__brands {
-    margin-top: clamp( 3.125rem , calc(2.0723684211rem + 5.2631578947vw) , 6.25rem );
+    margin-top: clamp( 2.1875rem , calc(1.1348684211rem + 5.2631578947vw) , 5.3125rem );
   }
 }
-@supports not (margin-top: clamp( 3.125rem , calc(2.0723684211rem + 5.2631578947vw) , 6.25rem )) {
+@supports not (margin-top: clamp( 2.1875rem , calc(1.1348684211rem + 5.2631578947vw) , 5.3125rem )) {
   .page__brands {
-    margin-top: calc(3.125rem + 3.125 * (100vw - 20rem) / 59.375);
+    margin-top: calc(2.1875rem + 3.125 * (100vw - 20rem) / 59.375);
   }
 }
 @supports (margin-top: clamp( 3.125rem , calc(2.0723684211rem + 5.2631578947vw) , 6.25rem )) {
@@ -1523,36 +1537,18 @@ For example header__container, main__container etc.
 
 .for-men__categories {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
-}
-@supports (gap: clamp( 1.25rem , calc(0.6184210526rem + 3.1578947368vw) , 3.125rem )) {
-  .for-men__categories {
-    gap: clamp( 1.25rem , calc(0.6184210526rem + 3.1578947368vw) , 3.125rem );
-  }
-}
-@supports not (gap: clamp( 1.25rem , calc(0.6184210526rem + 3.1578947368vw) , 3.125rem )) {
-  .for-men__categories {
-    gap: calc(1.25rem + 1.875 * (100vw - 20rem) / 59.375);
-  }
+  row-gap: 0.9375rem;
 }
 
 .for-women__categories {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
-}
-@supports (gap: clamp( 1.25rem , calc(0.6184210526rem + 3.1578947368vw) , 3.125rem )) {
-  .for-women__categories {
-    gap: clamp( 1.25rem , calc(0.6184210526rem + 3.1578947368vw) , 3.125rem );
-  }
-}
-@supports not (gap: clamp( 1.25rem , calc(0.6184210526rem + 3.1578947368vw) , 3.125rem )) {
-  .for-women__categories {
-    gap: calc(1.25rem + 1.875 * (100vw - 20rem) / 59.375);
-  }
+  row-gap: 0.9375rem;
 }
 
 .brands__content {
