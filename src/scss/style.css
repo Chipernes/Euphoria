@@ -436,17 +436,26 @@ For example header__container, main__container etc.
 
 .clothes-block {
   position: relative;
-  flex: 1 1 auto;
 }
-@media (min-width: 38.75rem) {
+@media (min-width: 20rem) {
   .clothes-block {
-    max-width: 25rem;
+    width: 48%;
+  }
+}
+@media (min-width: 37.5rem) {
+  .clothes-block {
+    width: 32%;
+  }
+}
+@media (min-width: 59.375rem) {
+  .clothes-block {
+    width: 22%;
   }
 }
 .clothes-block__heart {
   position: absolute;
-  top: 1.625rem;
-  right: 1.25rem;
+  top: 6%;
+  right: 8%;
   z-index: 2;
   width: 2rem;
   height: 2rem;
@@ -464,6 +473,7 @@ For example header__container, main__container etc.
 }
 .clothes-block__image {
   width: 100%;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
   user-select: none;
@@ -1616,19 +1626,10 @@ For example header__container, main__container etc.
 }
 .limelights__content {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
-}
-@supports (gap: clamp( 0.9375rem , calc(0.4953947368rem + 2.2105263158vw) , 2.25rem )) {
-  .limelights__content {
-    gap: clamp( 0.9375rem , calc(0.4953947368rem + 2.2105263158vw) , 2.25rem );
-  }
-}
-@supports not (gap: clamp( 0.9375rem , calc(0.4953947368rem + 2.2105263158vw) , 2.25rem )) {
-  .limelights__content {
-    gap: calc(0.9375rem + 1.3125 * (100vw - 20rem) / 59.375);
-  }
+  row-gap: 0.9375rem;
 }
 
 .feedback__content {

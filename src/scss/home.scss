@@ -533,10 +533,10 @@
 
   &__content {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    @include adaptiveValue("gap", 36, 15);
+    row-gap: rem(15);
   }
 }
 
